@@ -31,9 +31,14 @@ namespace CitiesSkylines
             {
                 foreach (KeyValuePair<Locale.Key, string> current in m_LocalizedStrings)
                 {
+                    /*
                     file.WriteLine("#. \"{0}\"", current.Key);
                     file.WriteLine("msgid \"{0}\"", current.Value.Replace("\r", @"\r").Replace("\n", @"\n"));
                     file.WriteLine("msgstr \"{0}\"", "");
+                    */
+                    file.WriteLine("#. \"{0}\"", current.Key);
+                    file.WriteLine("msgid \"{0}\"", current.Key);
+                    file.WriteLine("msgstr \"{0}\"", current.Value.Replace("\r", @"\r").Replace("\n", @"\n"));
                 }
             }
         }
